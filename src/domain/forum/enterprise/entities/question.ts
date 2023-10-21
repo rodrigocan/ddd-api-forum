@@ -78,6 +78,7 @@ export class Question extends AggregateRoot<QuestionProps> {
   // eslint-disable-next-line @typescript-eslint/adjacent-overload-signatures
   set attachments(attachments: QuestionAttachmentList) {
     this.props.attachments = attachments
+    this.touch()
   }
 
   // eslint-disable-next-line @typescript-eslint/adjacent-overload-signatures
